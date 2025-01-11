@@ -1,10 +1,12 @@
 #![no_std]
 #![no_main]
 
+use defmt::info;
 use defmt_rtt as _;
+use embassy_executor::Spawner;
 use panic_probe as _;
 
-#[cortex_m_rt::entry]
-fn main() -> ! {
-    loop {}
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    info!("Starting...")
 }
