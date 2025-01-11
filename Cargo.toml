@@ -13,4 +13,5 @@ embassy-executor = { version = "0.7.0", features = [
     "defmt",           # enable defmt logging
     "executor-thread", # enable the thread-mode executor, using WFE/SEV ni Cortex-M
 ] }
+embassy-nrf = { version = "0.3.1", features = ["defmt", "gpiote", "nrf52833"] }
 panic-probe = { version = "0.3.2", features = ["print-defmt"] }
